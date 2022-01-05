@@ -281,6 +281,49 @@ h1 {
   font-size: 0.75rem;
 }
 
+.sign-up-wrapper {
+  background: var(--mainBg);
+  padding-left: 1.143em;
+  padding-right: 1.143em;
+  padding-bottom: 6em;
+}
+
+.sign-up-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--introSignUpBg);
+  border-radius: 8px;
+  padding: 3em 1.786em 2.214em 1.786em;
+  text-align: center;
+}
+
+.sign-up-block h3 {
+  font-size: 1.15rem;
+  margin-bottom: 19px;
+}
+
+.sign-up-block p {
+  font-size: 0.9rem;
+}
+
+input[type="email"],
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  margin: 25px 0;
+}
+
+input[type="submit"] {
+  background: linear-gradient(to right, var(--cyan), var(--blue));
+  color: var(--white);
+  font-weight: 700;
+}
+
 @media (min-width: 768px) {
   .logo {
     width: 9em;
@@ -329,6 +372,18 @@ h1 {
   }
   .quote {
     width: 500px;
+  }
+  .sign-up-block h3 {
+    font-size: 2.286rem;
+  }
+  .sign-up-block p {
+    width: 75%;
+    margin: 0 auto;
+  }
+  input[type="email"],
+  input[type="submit"] {
+    width: 80%;
+    margin: 25px auto;
   }
 }
 
@@ -389,6 +444,19 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .quote {
+    width: 100%;
+  }
+  .sign-up-block {
+    padding: 3.571em 5.143em 3em 5.143em;
+  }
+
+  .sign-up-form {
+    display: grid;
+    grid-template-columns: auto 200px;
+    gap: 26px;
+  }
+  input[type="email"],
+  input[type="submit"] {
     width: 100%;
   }
 }
