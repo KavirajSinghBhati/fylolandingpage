@@ -12,6 +12,10 @@
 
 Here is a working live demo : https://kavirajsinghbhati.github.io/fylolandingpage/
 
+## Screenshots
+
+If you wish to see the screenshots of live site instead, kindly click [here](https://github.com/KavirajSinghBhati/fylolandingpage/blob/master/screenshots.md)
+
 ## Mobile support
 
 This page is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
