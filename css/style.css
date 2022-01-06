@@ -217,6 +217,8 @@ h1 {
   margin-left: 0.2em;
 }
 
+/* Quotes section */
+
 .quotes {
   background-color: var(--mainBg);
   display: flex;
@@ -231,6 +233,7 @@ h1 {
   display: grid;
   gap: 3em;
   position: relative;
+  padding-bottom: 300px;
 }
 
 .quotes-grid:first-child::before {
@@ -281,11 +284,17 @@ h1 {
   font-size: 0.75rem;
 }
 
+/* Sign up cta section */
+
 .sign-up-wrapper {
   background: var(--mainBg);
   padding-left: 1.143em;
   padding-right: 1.143em;
   padding-bottom: 6em;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  transform: translateY(-175px);
 }
 
 .sign-up-block {
@@ -322,6 +331,87 @@ input[type="submit"] {
   background: linear-gradient(to right, var(--cyan), var(--blue));
   color: var(--white);
   font-weight: 700;
+}
+
+/* Footer section */
+
+.footer {
+  background-color: var(--footerBg);
+  padding: 63px 28px 38px 25px;
+  display: grid;
+  grid-row-gap: 35px;
+  grid-column-gap: 0px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "logo" "address" "contact" "link-1" "link-2" "social";
+  padding-top: 200px;
+}
+
+.footer-logo {
+  width: 164px;
+  height: 50px;
+  grid-area: logo;
+  grid-column: 1 / end;
+}
+
+.footer-address {
+  grid-area: address;
+  display: flex;
+}
+
+.footer-address svg {
+  flex: 0 0 13px;
+  margin-right: 22px;
+}
+
+.footer-contact {
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact-phone,
+.footer-contact-mail {
+  margin-bottom: 20px;
+}
+
+.footer-contact svg {
+  flex: 0 0 13px;
+  margin-right: 22px;
+}
+
+.footer-links-1 {
+  grid-area: link-1;
+}
+
+.footer-links-1 a,
+.footer-links-2 a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-links-2 {
+  grid-area: link-2;
+}
+
+.footer-socials {
+  grid-area: social;
+  justify-self: center;
+}
+
+.footer-socials svg {
+  width: 35px;
+  height: 35px;
+  fill: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin-right: 16px;
+  padding: 8px;
+  transition: all 150ms ease-in-out;
+}
+
+.footer-socials svg:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  fill: var(--footerBg);
 }
 
 @media (min-width: 768px) {
@@ -384,6 +474,9 @@ input[type="submit"] {
   input[type="submit"] {
     width: 80%;
     margin: 25px auto;
+  }
+  .footer {
+    grid-column-gap: 25px;
   }
 }
 
@@ -458,5 +551,11 @@ input[type="submit"] {
   input[type="email"],
   input[type="submit"] {
     width: 100%;
+  }
+  .footer {
+    grid-column-gap: 35px;
+    grid-template-columns: 3fr 2fr 2fr 2fr auto;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "logo logo logo logo logo" "address contact link-1 link-2 social";
   }
 }
